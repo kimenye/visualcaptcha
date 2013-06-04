@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{A captcha that uses images instead of garbled text}
   gem.summary       = %q{A captcha that uses images instead of garbled text}
   gem.homepage      = "https://github.com/kimenye/visualcaptcha"
-  gem.files         = `git ls-files`.split($/)
+  gem.files         = Dir["{lib,vendor}/**/*"] + ["LICENSE.txt", "README.md"]
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
