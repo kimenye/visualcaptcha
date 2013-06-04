@@ -1,8 +1,6 @@
 require "visualcaptcha/version"
+require "visualcaptcha/engine"
 
 module Visualcaptcha
-  module Rails
-    class Engine < ::Rails::Engine
-    end
-  end
+
 end
