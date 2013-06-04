@@ -1,6 +1,6 @@
 # Visualcaptcha
 
-TODO: Write a gem description
+This Gem is ruby version of emotionLoop's PHP Visual Captcha
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Gem is still in development. Usage is coming soon.
 
 ## Contributing
 
