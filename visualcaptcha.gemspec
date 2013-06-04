@@ -5,7 +5,7 @@ require 'visualcaptcha/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "visualcaptcha"
-  gem.version       = Visualcaptcha::VERSION
+  gem.version       = VisualCaptcha::VERSION
   gem.authors       = ["Trevor Kimenye"]
   gem.email         = ["trevor@sprout.co.ke"]
   gem.description   = %q{A captcha that uses images instead of garbled text}

@@ -1,9 +1,10 @@
 require 'rails'
 require 'visualcaptcha'
 
-module Visualcaptcha
-  module Rails
-    class Engine < ::Rails::Engine
+module VisualCaptcha
+  class Engine < ::Rails::Engine
+    config.after_initialize do
+      ActionView::Base.send(:include, VisualCaptcha::ViewHelper)
     end
   end
 end
