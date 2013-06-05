@@ -3,6 +3,7 @@ require "visualcaptcha/engine"
 
 module VisualCaptcha
   autoload :ViewHelper, 'visualcaptcha/view'
+  autoload :ControllerHelpers, 'visualcaptcha/controller'
   autoload :Utils, 'visualcaptcha/utils'
 
   def self.setup
