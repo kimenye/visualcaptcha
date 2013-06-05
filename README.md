@@ -34,9 +34,9 @@ In the view file within the form tags add this code
 
 Add the following line in the file "app/controllers/application.rb"
 
-  ApplicationController < ActionController::Base
-    include VisualCaptcha::ControllerHelpers
-  end
+    ApplicationController < ActionController::Base
+        include VisualCaptcha::ControllerHelpers
+    end
 
 
 ## Contributing
