@@ -1,2 +1,17 @@
-<div class="eL-captcha clearfix">
+<link rel="stylesheet" href="/assets/visualcaptcha.css" />
+<div class="eL-captcha clearfix <%%= captcha_options[:type] %>">
+  <p class="eL-explanation <%%= captcha_options[:type] %>">
+    Drag the <strong><%%= captcha_options[:clue] %></strong> to the circle on the side.
+  </p>
+  <div class="eL-possibilities <%%= captcha_options[:type] %> clearfix">
+  </div>
+  <div class="eL-where2go <%%= captcha_options[:type] %> clearfix">
+  </div>
 </div>
+<script src="/assets/visualcaptcha.js"></script>
+<script type="text/javascript">
+  window.vCVals = {
+      'f' : $('.eL-captcha').closest('form').attr('id'),
+      'n' : 'captcha-value'
+  }
+</script>

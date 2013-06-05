@@ -16,9 +16,17 @@ Or install it yourself as:
 
     $ gem install visualcaptcha
 
+## Setup
+
+After installation, follow these simple steps to setup the plugin. The setup will depend on the version of rails your application is using.
+
+    $ rails generate visual_captcha
+
 ## Usage
 
-Gem is still in development. Usage is coming soon.
+###Controller Based
+
+We have only enabled a controller based flow at the moment - as this is the simplest use case required
 
 ## Contributing
 
