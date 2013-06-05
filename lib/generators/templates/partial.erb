@@ -4,10 +4,9 @@
     Drag the <strong><%%= challenge.answer.title %></strong> to the circle on the side.
   </p>
   <div class="eL-possibilities <%%= captcha_options[:type] %> clearfix">
-    <!--<img src="/assets/car.png" class="vc-3423423423432" data-value="3423423423432" />-->
-    <!--<img src="/assets/cat.png" class="vc-3423423423433" data-value="3423423423433" />-->
-    <!--<img src="/assets/clip.png" class="vc-3423423423434" data-value="3423423423434" />-->
-    <!--<img src="/assets/computer.png" class="vc-3423423423435" data-value="3423423423435" />-->
+    <%% challenge.options.each do |option| %>
+        <img src="/assets/<%%= option.image %>" class="vc-<%%= option.encrypted %>" data-value="<%%= option.encrypted %>" />
+    <%% end %>
   </div>
   <div class="eL-where2go <%%= captcha_options[:type] %> clearfix">
   </div>

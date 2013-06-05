@@ -22,6 +22,10 @@ After installation, follow these simple steps to setup the plugin. The setup wil
 
     $ rails generate visual_captcha
 
+This project requires jquery-ui so you should add it to the application.js
+
+    //= require jquery.ui.all
+
 ## Usage
 
 ###Controller Based

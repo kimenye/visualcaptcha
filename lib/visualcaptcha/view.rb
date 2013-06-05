@@ -6,7 +6,8 @@ module VisualCaptcha
 
       #key = visual_captcha_key('captcha')
 
-      captcha = VisualCaptcha::Captcha.new
+      number = options[:type] == "type-0" ? 5 : 4
+      captcha = VisualCaptcha::Captcha.new(number)
       challenge = captcha.build
 
       render :partial => 'visual_captcha/visual_captcha', :locals => { :captcha_options =>  options, :challenge => challenge }
@@ -18,7 +19,7 @@ module VisualCaptcha
         if options[:type] == :vertical
           options[:type] = "type-1"
         else
-          options[:type] = "type-2"
+          options[:type] = "type-0"
         end
         options
       end
