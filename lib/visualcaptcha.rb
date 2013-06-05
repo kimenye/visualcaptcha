@@ -11,12 +11,13 @@ module VisualCaptcha
 
   class Option
 
-    attr_accessor :id, :image, :title
+    attr_accessor :id, :image, :title, :encrypted
 
     def initialize(id, image, title)
       @id = id
       @image = image
       @title = title
+      @encrypted = VisualCaptcha::Utils.generate_key(id)
     end
 
   end
@@ -27,6 +28,8 @@ module VisualCaptcha
     def initialize(answer, options=nil)
       @answer = answer
       @options = options
+      @options << answer
+      @options.shuffle!
     end
   end
 
@@ -43,7 +46,17 @@ module VisualCaptcha
           Option.new('car', 'car.png', 'Car'),
           Option.new('cat', 'cat.png', 'Cat'),
           Option.new('chair', 'chair.png', 'Chair'),
-          Option.new('clip', 'clip.png', 'Clip')
+          Option.new('clip', 'clip.png', 'Clip'),
+          Option.new('clock', 'clock.png', 'Clock'),
+          Option.new('cloud', 'cloud.png', 'Cloud'),
+          Option.new('computer', 'computer.png', 'Computer'),
+          Option.new('envelope', 'envelope.png', 'Envelope'),
+          Option.new('eye', 'eye.png', 'Eye'),
+          Option.new('flag', 'flag.png', 'Flag'),
+          Option.new('folder', 'folder.png', 'Folder'),
+          Option.new('foot', 'foot.png', 'Foot'),
+          Option.new('graph', 'graph.png', 'Graph'),
+          Option.new('graph', 'graph.png', 'House')
       ]
 
       #@$this->answers = array(
@@ -97,7 +110,7 @@ module VisualCaptcha
       others = []
 
       #pick the remaining clues
-      (1..@number).to_a.each_with_index do |c,i|
+      (1..@number-1).to_a.each_with_index do |c,i|
 
         possible = opts.sample
         others << possible

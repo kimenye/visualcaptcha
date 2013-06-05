@@ -4,14 +4,18 @@
     Drag the <strong><%%= challenge.answer.title %></strong> to the circle on the side.
   </p>
   <div class="eL-possibilities <%%= captcha_options[:type] %> clearfix">
+    <!--<img src="/assets/car.png" class="vc-3423423423432" data-value="3423423423432" />-->
+    <!--<img src="/assets/cat.png" class="vc-3423423423433" data-value="3423423423433" />-->
+    <!--<img src="/assets/clip.png" class="vc-3423423423434" data-value="3423423423434" />-->
+    <!--<img src="/assets/computer.png" class="vc-3423423423435" data-value="3423423423435" />-->
   </div>
   <div class="eL-where2go <%%= captcha_options[:type] %> clearfix">
   </div>
 </div>
 <script src="/assets/visualcaptcha.js"></script>
 <script type="text/javascript">
-  window.vCVals = {
-      'f' : $('.eL-captcha').closest('form').attr('id'),
-      'n' : 'captcha-value'
-  }
+    window.vCVals = {
+        'f' : $('.eL-captcha').closest('form').attr('id'),
+        'n' : 'captcha-value'
+    }
 </script>

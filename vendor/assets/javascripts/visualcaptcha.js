@@ -11,7 +11,7 @@
  * @license GNU GPL v3
  * @version 4.0.3
  */
-(function($) {
+$(document).ready(function() {
 	var isMobile = false;
 	var isRetina = false;
 	var supportsAudio = false;
@@ -90,6 +90,7 @@
 	}
 	
 	if ( ! isMobile ) {// If it's not mobile, load normal drag/drop behavior
+        debugger;
 		$('div.eL-captcha > div.eL-possibilities > img').draggable({ opacity: 0.6, revert: 'invalid' });
 		$('div.eL-captcha > div.eL-possibilities').droppable({
 			drop: function(event, ui) {
@@ -157,4 +158,4 @@
 			}
 		});
 	}
-})(jQuery);
+});

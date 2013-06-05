@@ -8,7 +8,6 @@ module VisualCaptcha
 
       captcha = VisualCaptcha::Captcha.new
       challenge = captcha.build
-      session[:captcha] = challenge
 
       render :partial => 'visual_captcha/visual_captcha', :locals => { :captcha_options =>  options, :challenge => challenge }
     end
