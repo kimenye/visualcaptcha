@@ -28,6 +28,17 @@ After installation, follow these simple steps to setup the plugin. The setup wil
 
 We have only enabled a controller based flow at the moment - as this is the simplest use case required
 
+In the view file within the form tags add this code
+
+    <%= show_visual_captcha(:type => :vertical) %>
+
+Add the following line in the file "app/controllers/application.rb"
+
+  ApplicationController < ActionController::Base
+    include VisualCaptcha::ControllerHelpers
+  end
+
+
 ## Contributing
 
 1. Fork it

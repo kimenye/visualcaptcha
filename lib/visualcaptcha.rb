@@ -7,4 +7,8 @@ module VisualCaptcha
   def self.setup
     yield self
   end
+
+  class Captcha
+
+  end
 end
