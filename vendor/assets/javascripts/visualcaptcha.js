@@ -90,7 +90,6 @@ $(document).ready(function() {
 	}
 	
 	if ( ! isMobile ) {// If it's not mobile, load normal drag/drop behavior
-        debugger;
 		$('div.eL-captcha > div.eL-possibilities > img').draggable({ opacity: 0.6, revert: 'invalid' });
 		$('div.eL-captcha > div.eL-possibilities').droppable({
 			drop: function(event, ui) {
