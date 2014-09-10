@@ -61,12 +61,12 @@ div.eL-captcha > div.eL-where2go {
 	padding: 0;
 	display: block;
 	width: 100px;
-	background: transparent url('/assets/dropzone.png') center center no-repeat;
+	background: transparent image-url('dropzone.png') center center no-repeat;
 	float: left;
 	height: 100px;
 }
 div.eL-captcha > div.eL-where2go.retina {
-	background-image: url('/assets/dropzone@2x.png');
+	background-image: image-url('dropzone@2x.png');
 	background-size: 90px 90px;
 }
 div.eL-captcha > p.eL-accessibility {
