@@ -5,7 +5,7 @@
   </p>
   <div class="eL-possibilities <%%= captcha_options[:type] %> clearfix">
     <%% challenge.options.each do |option| %>
-        <img src="/assets/<%%= option.image %>" class="vc-<%%= option.encrypted %>" data-value="<%%= option.encrypted %>" />
+        <img src="<%%= image_path option.image %>" data-at2x="<%%= image_path(option.image.gsub(/\A(.+)(\.\w{3,4})\z/, ) {"#{$1}@2x#{$2}"})%>" class="vc-<%%= option.encrypted %>" data-value="<%%= option.encrypted %>" />
     <%% end %>
   </div>
   <div class="eL-where2go <%%= captcha_options[:type] %> clearfix">

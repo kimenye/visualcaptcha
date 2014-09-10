@@ -50,15 +50,21 @@ $(document).ready(function() {
 	if ( isRetina ) {
 		$('div.eL-captcha img').each(function(index, element) {
 			if ( ! $(element).attr('src') ) return;
-			
-			var newImageSRC = $(element).attr('src').replace(/(.+)(\.\w{3,4})$/, "$1@2x$2");
-			$.ajax({
-				url: newImageSRC,
-				type: "HEAD",
-				success: function() {
-					$(element).attr('src', newImageSRC);
-				}
-			});
+
+            var retinaImageSrc;
+            if (retinaImageSrc = $(element).data('at2x')){
+                $(element).attr('src', retinaImageSrc);
+            }
+            else {
+                var newImageSRC = $(element).attr('src').replace(/(.+)(\.\w{3,4})$/, "$1@2x$2");
+                $.ajax({
+                    url: newImageSRC,
+                    type: "HEAD",
+                    success: function() {
+                        $(element).attr('src', newImageSRC);
+                    }
+                });
+            }
 		});
 
 		$('div.eL-captcha > div.eL-where2go').addClass('retina');
