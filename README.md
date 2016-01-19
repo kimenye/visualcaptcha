@@ -1,4 +1,8 @@
-# Visualcaptcha
+# Deprecated
+
+This gem is deprecated. Please use [emotionLoop's official ruby gem](https://github.com/emotionLoop/visualCaptcha-rubyGem).
+
+## Visualcaptcha
 
 This Gem is ruby version of emotionLoop's PHP Visual Captcha
 
